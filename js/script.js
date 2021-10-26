@@ -32,16 +32,25 @@ const mailist = [
 // console.log(mailist);
 
 const mailutente = prompt ("Inserisci email");
-const accesso = false;
+let accesso = 0;
+let messaggio = "";
 
 // assegno valore numerico alla lista mail con il ciclo for
 
 for (let i = 0; i < mailist.length; i++) {
-    //console.log(mailist[i]);
+    // console.log(mailist[6]);
     if (mailist[i] === mailutente) {
+        accesso = 1;
         // console.log("accesso consentito");
-        const accesso = true;
-        // console.log(accesso);
     }
 }
 
+if (accesso == 1) {
+    // console.log("accesso consentito");
+    messaggio = "Accesso consentito";
+    document.getElementById("messaggio").innerHTML = messaggio;
+}else {
+    // console.log("accesso non consentito");
+    messaggio = "Accesso non consentito";
+    document.getElementById("messaggio").innerHTML = messaggio;
+}
