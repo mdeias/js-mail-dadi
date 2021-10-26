@@ -70,9 +70,16 @@
 
 const numeroUtente = parseInt(prompt("Scegli un numero da 1 a 6"));
 const numeroPc = Math.floor(Math.random() *6) +1;
-const somma = numeroUtente + numeroPc;
 
-// console.log(numeroUtente);
-// console.log(numeroPc);
-// console.log(somma);
 
+console.log(numeroUtente);
+console.log(numeroPc);
+
+
+if (numeroUtente > numeroPc) {
+    console.log("Hai vinto!");
+}else if (numeroUtente < numeroPc) {
+    console.log("Hai perso!");
+}else if (numeroUtente === numeroPc) {
+    console.log("Pareggio");
+}
