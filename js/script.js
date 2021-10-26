@@ -31,11 +31,17 @@ const mailist = [
 
 // console.log(mailist);
 
-const mailutente = prompt ("Inserisci email")
+const mailutente = prompt ("Inserisci email");
+const accesso = false;
 
 // assegno valore numerico alla lista mail con il ciclo for
 
 for (let i = 0; i < mailist.length; i++) {
     //console.log(mailist[i]);
-    
+    if (mailist[i] === mailutente) {
+        // console.log("accesso consentito");
+        const accesso = true;
+        // console.log(accesso);
+    }
 }
+
