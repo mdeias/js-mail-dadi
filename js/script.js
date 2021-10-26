@@ -53,12 +53,12 @@
 // if (accesso == 1) {
 //     // console.log("accesso consentito");
 //     messaggio = "Accesso consentito";
-//     document.getElementById("messaggio").innerHTML = messaggio;
 // }else {
 //     // console.log("accesso non consentito");
 //     messaggio = "Accesso non consentito";
-//     document.getElementById("messaggio").innerHTML = messaggio;
 // }
+
+// document.getElementById("messaggio").innerHTML = messaggio;
 
 
 
@@ -70,16 +70,22 @@
 
 const numeroUtente = parseInt(prompt("Scegli un numero da 1 a 6"));
 const numeroPc = Math.floor(Math.random() *6) +1;
+let messaggio = "";
 
-
-console.log(numeroUtente);
-console.log(numeroPc);
+// console.log(numeroUtente);
+// console.log(numeroPc);
 
 
 if (numeroUtente > numeroPc) {
-    console.log("Hai vinto!");
+    // console.log("Hai vinto!");
+    messaggio = `Hai vinto, il computer ha giocato il numero ${numeroPc}`;
+
 }else if (numeroUtente < numeroPc) {
-    console.log("Hai perso!");
+    // console.log("Hai perso!");
+    messaggio = `Hai perso, il computer ha giocato il numero ${numeroPc}`;
 }else if (numeroUtente === numeroPc) {
-    console.log("Pareggio");
+    // console.log("Pareggio");
+    messaggio = `Pareggio, il computer ha giocato il tuo stesso numero`;
 }
+
+document.getElementById("messaggio").innerHTML = messaggio;
