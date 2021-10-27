@@ -68,7 +68,7 @@
 // estraggo tramite condizioni un numero random 
 // sommo le giocate e decreto vincitore
 
-const numeroUtente = parseInt(prompt("Scegli un numero da 1 a 6"));
+const numeroUtente = Math.floor(Math.random() *6) +1;
 const numeroPc = Math.floor(Math.random() *6) +1;
 let messaggio = "";
 
@@ -78,14 +78,14 @@ let messaggio = "";
 
 if (numeroUtente > numeroPc) {
     // console.log("Hai vinto!");
-    messaggio = `Hai vinto, il computer ha giocato il numero ${numeroPc}`;
+    messaggio = `Hai vinto, il tuo numero è ${numeroUtente}, il computer ha giocato il numero ${numeroPc}`;
 
 }else if (numeroUtente < numeroPc) {
     // console.log("Hai perso!");
-    messaggio = `Hai perso, il computer ha giocato il numero ${numeroPc}`;
+    messaggio = `Hai perso,il tuo numero è ${numeroUtente}, il computer ha giocato il numero ${numeroPc}`;
 }else if (numeroUtente === numeroPc) {
     // console.log("Pareggio");
-    messaggio = `Pareggio, il computer ha giocato il tuo stesso numero`;
+    messaggio = `Pareggio, il tuo numero è ${numeroUtente}, il computer ha giocato il tuo stesso numero`;
 }
 
 document.getElementById("messaggio").innerHTML = messaggio;
