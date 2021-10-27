@@ -38,7 +38,7 @@ const mailist = [
 
 const mailutente = prompt ("Inserisci email");
 let accesso = 0;
-let messaggio = "";
+let messaggioMail= "";
 
 // assegno valore numerico alla lista mail con il ciclo for
 
@@ -52,11 +52,38 @@ for (let i = 0; i < mailist.length; i++) {
 
 if (accesso == 1) {
     // console.log("accesso consentito");
-    messaggio = "Accesso consentito";
+    messaggioMail = "Accesso consentito";
 }else {
     // console.log("accesso non consentito");
-    messaggio = "Accesso non consentito";
+    messaggioMail = "Accesso non consentito";
 }
 
-document.getElementById("messaggio").innerHTML = messaggio;
+document.getElementById("messaggioMail").innerHTML = messaggioMail;
 
+// DADI 
+
+// chiedo all'utente un numero da 1 a 6
+// estraggo tramite condizioni un numero random 
+// confronto e decreto vincitore
+
+const numeroUtente = Math.floor(Math.random() *6) +1;
+const numeroPc = Math.floor(Math.random() *6) +1;
+let messaggioDadi = "";
+
+// console.log(numeroUtente);
+// console.log(numeroPc);
+
+
+if (numeroUtente > numeroPc) {
+    // console.log("Hai vinto!");
+    messaggioDadi = `Hai vinto, il tuo numero è ${numeroUtente}, il computer ha giocato il numero ${numeroPc}`;
+
+}else if (numeroUtente < numeroPc) {
+    // console.log("Hai perso!");
+    messaggioDadi = `Hai perso,il tuo numero è ${numeroUtente}, il computer ha giocato il numero ${numeroPc}`;
+}else if (numeroUtente === numeroPc) {
+    // console.log("Pareggio");
+    messaggioDadi = `Pareggio, il tuo numero è ${numeroUtente}, il computer ha giocato il tuo stesso numero`;
+}
+
+document.getElementById("messaggioDadi").innerHTML = messaggioDadi;
